@@ -1,5 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 
+/**
+ * A logging utility class to help in easy and uniform logging in the application either locally
+ * or at a remote location like Logstash.
+ * <br/>
+ * Using this utility, logs can be saved with different logging levels, levels can be enabled or
+ * disabled, etc.
+ */
 class Log {
 
     static #_DEBUG = 0;
@@ -28,6 +35,17 @@ class Log {
         return this.#_ERROR;
     }
 
+    /**
+     * Set global debug level for this application
+     * Available options:-
+     * <ol>
+     * <li>DEBUG</li>
+     * <li>INFO</li>
+     * <li>WARN</li>
+     * <li>ERROR</li>
+     * </ol>
+     * @example setLoggingLevel(DEBUG)
+     */
     static setLoggingLevel(level) {
         switch (level) {
             case 1:
@@ -56,25 +74,49 @@ class Log {
         }
     }
 
-
+    /**
+     * Log's message at debug level
+     * @param component Name of the component or class from where its being called
+     * @param msg1 Message (as string) for the log
+     * @param msg2 Message (as string) for the log
+     */
     static debug(component, msg1, msg2) {
         if (this.#isDebugEnabled) {
             this.#log("Debug", component, msg1, msg2)
         }
     }
 
+    /**
+     * Log's message at information level
+     * @param component Name of the component or class from where its being called
+     * @param msg1 Message (as string) for the log
+     * @param msg2 Message (as string) for the log
+     */
     static info(component, msg1, msg2) {
         if (this.#isInfoEnabled) {
             this.#log("Info", component, msg1, msg2)
         }
     }
 
+    /**
+     * Log's message at warning level
+     * @param component Name of the component or class from where its being called
+     * @param msg1 Message (as string) for the log
+     * @param msg2 Message (as string) for the log
+     */
     static warn(component, msg1, msg2) {
         if (this.#isWarnEnabled) {
             this.#log("Warn", component, msg1, msg2)
         }
     }
 
+    /**
+     * Log's message at error level
+     * @param component Name of the component or class from where its being called
+     * @param msg1 Message (as string) for the log
+     * @param msg2 Message (as string) for the log
+     * @param err Error stack for logging purpose
+     */
     static error(component, msg1, msg2, err) {
         if (this.#isErrorEnabled) {
             this.#log("Error", component, msg1, msg2, err)
