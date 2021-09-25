@@ -1,0 +1,32 @@
+{
+  "name": "my-react-tailwindcss-vite-app",
+  "version": "0.0.1",
+  "config": {
+    "port": "8080"
+  },
+  "scripts": {
+    "build": "npm run clean && rm -rf dist && vite build",
+    "clean": "rm -rf out",
+    "dev": "vite",
+    "docker:build": "npm run build && docker build . -t %npm_package_name%:%npm_package_version%",
+    "docker:clean-up:c": "docker stop %npm_package_name% && docker rm %npm_package_name%",
+    "docker:clean-up:i": "docker rmi %npm_package_name%:%npm_package_version%",
+    "docker:serve": "npm run docker:build && docker run --name %npm_package_name% -d -p %npm_package_config_port%:80 %npm_package_name%:%npm_package_version%",
+    "fix": "npm audit fix --force --production",
+    "serve": "vite preview",
+    "upgrade": "npx npm-check-updates -u"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "autoprefixer": "^10.3.5",
+    "postcss": "^8.3.7",
+    "tailwindcss": "^2.2.15",
+    "vite": "^2.5.10"
+  }
+}

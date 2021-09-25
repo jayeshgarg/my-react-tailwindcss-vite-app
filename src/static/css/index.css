@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind tailwind;
+@tailwind tailwind-dark;
+@tailwind tailwind-experimental;
+
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #1F2937;
+}
+
+input ~ .dot {
+    transition: transform 0s linear;
+}

@@ -1,1 +1,1 @@
-# my-react-tailwindcss-vite-app
+#React + TailwindCss + JIT + Vite
