@@ -16,6 +16,24 @@ export default defineConfig({
         minify: false,
         sourcemap: false,
         cssCodeSplit: true,
-        assetsInlineLimit: 0
+        assetsInlineLimit: 0,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (!id.includes('material-ui')) {
+                        console.log(id)
+                    }
+                    if (id.includes('material-ui')) {
+                        return 'mui'
+                    }
+                    if (id.includes('recharts')) {
+                        return 'charts'
+                    }
+                    if (id.includes('node_modules')) {
+                        return 'vendor';
+                    }
+                }
+            }
+        }
     }
 })
