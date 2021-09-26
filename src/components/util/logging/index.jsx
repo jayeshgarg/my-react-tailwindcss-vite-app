@@ -134,7 +134,7 @@ class Log {
         if (isDevMode) {
             console.log(completeLogMessage);
             if (stack) {
-                console.log(stack)
+                console.error(stack)
             }
         } else {
             //in case of prod mode, this can be used to send logs to remote server like logstash for monitoring

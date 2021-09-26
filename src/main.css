@@ -4,6 +4,7 @@
 @tailwind tailwind;
 @tailwind tailwind-dark;
 @tailwind tailwind-experimental;
+@tailwind screens;
 
 input:checked ~ .dot {
     transform: translateX(100%);

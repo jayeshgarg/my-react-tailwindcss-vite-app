@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './static/css/index.css'
-import App from './App'
-import Log from "./util/ConsoleLogUtil";
+import './main.css'
+import App from './components/App'
+import Log from "./components/util/logging";
 
-Log.setLoggingLevel(Log.DEBUG)
+Log.setLoggingLevel(Log.ERROR)
 
-ReactDOM.render(<App/>, document.getElementById('root'))
+ReactDOM.render(<React.StrictMode><App/></React.StrictMode>, document.getElementById('root'))

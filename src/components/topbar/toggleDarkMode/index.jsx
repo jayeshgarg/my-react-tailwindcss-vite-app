@@ -1,7 +1,7 @@
 import React from 'react';
-import Log from "../util/ConsoleLogUtil";
+import Log from "./../../util/logging";
 
-function ToggleButton({onClickHandler, initialDarkModeState}) {
+function Index({showLabel, onClickHandler, initialDarkModeState}) {
 
     Log.debug("ToggleButton", "Dark Mode", initialDarkModeState)
 
@@ -15,13 +15,13 @@ function ToggleButton({onClickHandler, initialDarkModeState}) {
                     <div className="block bg-gray-500 w-8 h-5 rounded-full"></div>
                     <div className="dot absolute left-1 top-1 bg-white w-3 h-3 rounded-full transition"></div>
                 </div>
-                <div className="ml-3 text-gray-500 font-medium">
+                {showLabel && <div className="ml-3 text-gray-500 font-medium">
                     Dark Mode
-                </div>
+                </div>}
             </label>
 
         </div>
     )
 }
 
-export default ToggleButton;
+export default Index;
