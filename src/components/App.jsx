@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Log from "./util/logging";
 import TopNavigation from "./topbar";
 import Sidebar from "./sidebar";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from "./pages/home";
 
 function App() {
 
@@ -34,29 +36,20 @@ function App() {
     return (
         <div>
             <TopNavigation darkModeClickHandler={toggleDarkMode} initialDarkModeState={isDarkMode}/>
-            <div className='flex'>
-                <Sidebar/>
-                <div className='flex-4 bg-indigo-200'>
-                    other pages
+            <div className='flex flex-nowrap flex-row'>
+                <div className='flex-1-5 min-w-0 bg-red-200 shadow-around'>
+                    <Sidebar/>
+                </div>
+                <div className='flex-4-5 min-w-0'>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route path="/" component={Home} exact/>
+                        </Switch>
+                    </BrowserRouter>
                 </div>
             </div>
         </div>
     )
-
-    /*  return (
-          <BrowserRouter>
-              <div className="fixed t-0 l-0 w-full h-full p-0 m-0 bg-blue-200 dark:bg-blue-800">
-                  <div className="pt-20">
-                      <Navbar darkModeClickHandler={toggleDarkMode} initialDarkModeState={isDarkMode}/>
-                      <Switch>
-                          <Route path="/" component={Home} exact/>
-                          <Route path="/about" component={About} exact/>
-                          <Route path="/docs" component={Docs} exact/>
-                      </Switch>
-                  </div>
-              </div>
-          </BrowserRouter>
-      )*/
 }
 
 export default App

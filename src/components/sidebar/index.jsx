@@ -1,46 +1,102 @@
 import React from 'react';
-import {LineStyle, Timeline, TrendingUp} from '@material-ui/icons';
-import SidebarMenuGroup from "./menuGroup";
+import SidebarMenuGroup from "./submenuGroup";
+import {
+    BarChart,
+    ChatBubbleOutlineOutlined,
+    DynamicFeed,
+    EuroSymbol,
+    LineStyle,
+    MailOutlined,
+    PeopleOutlined,
+    Report,
+    Storefront,
+    Timeline,
+    TrendingUp,
+    WorkOutline
+} from "@material-ui/icons";
 
 const Sidebar = () => {
 
     const data = [
         {
-            title: "Dashboard1",
+            title: "Dashboard",
             items: [
                 {
                     name: "Home",
-                    icon: "LineStyle",
+                    icon: <LineStyle/>,
                     link: "#"
                 },
                 {
                     name: "Analytics",
-                    icon: "Timeline",
+                    icon: <Timeline/>,
                     link: "#",
                     active: true
                 },
                 {
                     name: "Sales",
-                    icon: "TrendingUp",
+                    icon: <TrendingUp/>,
                     link: "#"
                 }
             ]
         }, {
-            title: "Dashboard2",
+            title: "Quick Menu",
             items: [
                 {
-                    name: "Home",
-                    icon: "LineStyle",
+                    name: "Users",
+                    icon: <PeopleOutlined/>,
+                    link: "#",
+                },
+                {
+                    name: "Products",
+                    icon: <Storefront/>,
+                    link: "#"
+                },
+                {
+                    name: "Transactions",
+                    icon: <EuroSymbol/>,
+                    link: "#",
+                },
+                {
+                    name: "Reports",
+                    icon: <BarChart/>,
+                    link: "#",
+                }
+            ]
+        }, {
+            title: "Quick Menu",
+            items: [
+                {
+                    name: "Mail",
+                    icon: <MailOutlined/>,
+                    link: "#",
+                },
+                {
+                    name: "Feedback",
+                    icon: <DynamicFeed/>,
+                    link: "#"
+                },
+                {
+                    name: "Messages",
+                    icon: <ChatBubbleOutlineOutlined/>,
+                    link: "#",
+                }
+            ]
+        }, {
+            title: "Staff",
+            items: [
+                {
+                    name: "Manage",
+                    icon: <WorkOutline/>,
                     link: "#",
                 },
                 {
                     name: "Analytics",
-                    icon: "Timeline",
+                    icon: <Timeline/>,
                     link: "#"
                 },
                 {
-                    name: "Sales",
-                    icon: "TrendingUp",
+                    name: "Reports",
+                    icon: <Report/>,
                     link: "#",
                 }
             ]
@@ -48,7 +104,7 @@ const Sidebar = () => {
     ]
 
     return (
-        <div className='flex-1 h-sidebar sticky top-12'>
+        <div className='h-sidebar sticky pl-5 pt-2'>
             {
                 data.map((grp, index) => {
                     return <SidebarMenuGroup key={index} data={grp}/>

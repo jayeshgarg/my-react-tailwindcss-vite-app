@@ -5,7 +5,7 @@
     "port": "8080"
   },
   "scripts": {
-    "build": "npm run clean && rm -rf dist && vite build",
+    "build": "npm run clean && vite build",
     "clean": "rm -rf out",
     "dev": "vite",
     "docker:build": "npm run build && docker build . -t %npm_package_name%:%npm_package_version%",

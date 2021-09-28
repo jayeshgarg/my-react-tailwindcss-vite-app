@@ -20,17 +20,27 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks(id) {
-                    if (!id.includes('material-ui')) {
-                        console.log(id)
-                    }
-                    if (id.includes('material-ui')) {
-                        return 'mui'
-                    }
+                    //src, vite, jss, material-ui, css-vendor, babel, react
                     if (id.includes('recharts')) {
                         return 'charts'
                     }
+                    if (id.includes('material-ui')) {
+                        //console.log('material-ui');
+                        if (id.includes('icons')) {
+                            //console.log('babel');
+                            return 'mui-icon'
+                        }
+                        //console.log(id)
+                        return 'mui-other'
+                    }
+                    if (id.includes('babel')) {
+                        return 'babel'
+                    }
                     if (id.includes('node_modules')) {
                         return 'vendor';
+                    }
+                    if (id.includes('src')) {
+                        return 'app'
                     }
                 }
             }

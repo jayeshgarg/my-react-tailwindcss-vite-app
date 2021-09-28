@@ -10,7 +10,7 @@ const TopNavigation = ({darkModeClickHandler, initialDarkModeState}) => {
     const profilePic = 'https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg';
 
     return (
-        <div className='w-full h-12 bg-white sticky top-0 bg-green-100 dark:bg-green-700 z-top'>
+        <div className='w-full h-12 bg-white sticky top-0 bg-green-100 dark:bg-green-700 z-top shadow-around overflow-x-hidden'>
             <div className='h-full flex py-0 px-5 items-center justify-between'>
                 <Logo/>
                 <div className='flex items-center'>
