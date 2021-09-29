@@ -13,7 +13,7 @@ import {
     Timeline,
     TrendingUp,
     WorkOutline
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 
 const Sidebar = () => {
 

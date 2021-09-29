@@ -1,5 +1,5 @@
 import React from 'react';
-import {Visibility} from "@material-ui/icons";
+import {Visibility} from "@mui/icons-material";
 import Log from "../../util/logging";
 
 const WidgetSmall = () => {
@@ -27,7 +27,7 @@ const WidgetSmall = () => {
             {
                 id: 4,
                 pic: "https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg",
-                name: "Jackson VeryLongName Doe dxcJackson VeryLongName Doe dxc",
+                name: "Jackson VeryLongName Doe",
                 title: "Delivery Lead"
             },
             {
@@ -57,8 +57,8 @@ const WidgetSmall = () => {
                             </td>
                             <td className='py-1.5 pr-1.5'>
                                 <div className='flex flex-col'>
-                                    <span className='font-semibold'>{member.name}</span>
-                                    <span className='font-extralight'>{member.title}</span>
+                                    <span className='font-semibold overflow-ellipsis'>{member.name}</span>
+                                    <span className='font-extralight text-sm'>{member.title}</span>
                                 </div>
                             </td>
                             <td className='py-1.5'>

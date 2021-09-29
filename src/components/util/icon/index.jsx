@@ -1,4 +1,4 @@
-import * as Icons from "@material-ui/icons";
+import * as Icons from "@mui/icons-material";
 import React from "react";
 
 /* Not a very elegant way of doing thing as it will load all possible icons from material ui into bundle */

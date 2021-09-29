@@ -1,7 +1,7 @@
 import React from 'react';
 import Log from "./../../util/logging";
 
-function Index({showLabel, onClickHandler, initialDarkModeState}) {
+const ToggleDarkMode = ({showLabel, onClickHandler, initialDarkModeState}) => {
 
     Log.debug("ToggleButton", "Dark Mode", initialDarkModeState)
 
@@ -24,4 +24,4 @@ function Index({showLabel, onClickHandler, initialDarkModeState}) {
     )
 }
 
-export default Index;
+export default ToggleDarkMode;

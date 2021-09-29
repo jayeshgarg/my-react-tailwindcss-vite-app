@@ -1,5 +1,4 @@
 import React from 'react';
-import {NotificationsNone, Message, Settings} from '@material-ui/icons';
 import Logo from "./logo";
 import Profile from "./profile";
 import TopBarRightMenu from "./rightMenu";

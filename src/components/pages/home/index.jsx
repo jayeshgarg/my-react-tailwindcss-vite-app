@@ -4,7 +4,7 @@ import LineChart from "../../widgets/charts";
 import WidgetSmall from "../../widgets/small";
 import WidgetLarge from "../../widgets/large";
 
-function Home() {
+const Home = () => {
     const widgetData = [
         {
             title: "Revenue",

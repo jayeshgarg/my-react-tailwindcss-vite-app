@@ -1,6 +1,6 @@
 import React from 'react';
 import {height} from "tailwindcss/lib/plugins";
-import {ArrowDownward, ArrowUpward} from "@material-ui/icons";
+import {ArrowDownward, ArrowUpward} from "@mui/icons-material";
 
 const FeaturedInfo = ({data}) => {
 

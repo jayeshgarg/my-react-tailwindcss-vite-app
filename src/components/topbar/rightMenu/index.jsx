@@ -1,5 +1,5 @@
 import React from 'react';
-import {Message, NotificationsNone, Settings} from "@material-ui/icons";
+import {Message, NotificationsNone, Settings} from "@mui/icons-material";
 
 const TopBarRightMenu = ({enableNoti, enableMessage, enableSettings}) => {
     return (
