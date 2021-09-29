@@ -12,7 +12,7 @@ const LineChart = ({data}) => {
     });
 
     return (
-        <div className='m-5 p-5 rounded-xl cursor-pointer shadow-around'>
+        <div className='p-5 rounded-xl cursor-pointer shadow-around'>
             <h3 className='mb-5 text-2xl font-semibold'>{data.title}</h3>
             <ResponsiveContainer width="100%" aspect={4 / 1}>
                 <Chart data={data.data} margin={{top: 5, right: 30, left: 20, bottom: 5,}}>

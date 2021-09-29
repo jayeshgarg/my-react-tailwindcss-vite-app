@@ -49,16 +49,16 @@ function Home() {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full pb-5">
             <div className='w-full flex flex-wrap justify-between'>
-                <div className='flex-1 mt-5'><FeaturedInfo data={widgetData[0]}/></div>
-                <div className='flex-1 mt-5'><FeaturedInfo data={widgetData[1]}/></div>
-                <div className='flex-1 mt-5'><FeaturedInfo data={widgetData[2]}/></div>
+                <div className='flex-1-3 mx-5 mt-5'><FeaturedInfo data={widgetData[0]}/></div>
+                <div className='flex-1-3 mx-5 mt-5'><FeaturedInfo data={widgetData[1]}/></div>
+                <div className='flex-1-3 mx-5 mt-5'><FeaturedInfo data={widgetData[2]}/></div>
             </div>
-            <div className=''>
+            <div className='mx-5 mt-5'>
                 <LineChart data={lineChartData}/>
             </div>
-            <div className='flex flex-nowrap flex-row m-5 w-full'>
+            <div className='flex flex-nowrap flex-row mx-5 mt-5'>
                 <div className='flex-1-3 min-w-0 mr-5'><WidgetSmall/></div>
                 <div className='flex-2-3 min-w-0'><WidgetLarge/></div>
             </div>
