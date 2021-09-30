@@ -48,6 +48,28 @@ const Home = () => {
         showGrid: true
     }
 
+    const widgetLargeData = {
+        title: 'Latest Transactions',
+        transactions: [
+            {id: 1, name: "Jane Doe", date: "2021-09-29", amt: 1000.00, status: "Pending"},
+            {id: 2, name: "John Doe", date: "2020-04-20", amt: 1500.00, status: "Approved"},
+            {id: 3, name: "Jonny Doe", date: "2018-01-05", amt: 100.00, status: "Approved"},
+            {id: 4, name: "Jennifer Doe", date: "2019-02-29", amt: 1000000.00, status: "Declined"},
+        ],
+        columnNames: [
+            {id: 'id', headerName: 'Customer ID', width: 10},
+            {id: 'name', headerName: 'Customer Name', width: 100},
+            {id: 'date', headerName: 'Transaction Date', width: 50, isNumber: true},
+            {id: 'amt', headerName: 'Transaction Amount', width: 50, isCurrency: true, currencySymbol: '€'},
+            {id: 'status', headerName: 'Status', width: 100, isColoredStatus: true},
+        ],
+        statusValues: {
+            Pending: 0,
+            Approved: 1,
+            Declined: -1
+        }
+    }
+
     return (
         <div className="w-full pb-5">
             <div className='w-full flex flex-wrap justify-between'>
@@ -60,7 +82,7 @@ const Home = () => {
             </div>
             <div className='flex flex-nowrap flex-row mx-5 mt-5'>
                 <div className='flex-1-3 min-w-0 mr-5'><WidgetSmall/></div>
-                <div className='flex-2-3 min-w-0'><WidgetLarge/></div>
+                <div className='flex-2-3 min-w-0'><WidgetLarge data={widgetLargeData} checkbox/></div>
             </div>
         </div>
     )

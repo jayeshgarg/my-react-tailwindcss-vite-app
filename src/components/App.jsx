@@ -4,6 +4,7 @@ import TopNavigation from "./topbar";
 import Sidebar from "./sidebar";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Home from "./pages/home";
+import Users from "./pages/users";
 
 function App() {
 
@@ -34,21 +35,22 @@ function App() {
     }, [isDarkMode])
 
     return (
-        <div>
-            <TopNavigation darkModeClickHandler={toggleDarkMode} initialDarkModeState={isDarkMode}/>
-            <div className='flex flex-nowrap flex-row'>
-                <div className='flex-1-5 min-w-0 bg-red-200 shadow-around'>
-                    <Sidebar/>
-                </div>
-                <div className='flex-4-5 min-w-0'>
-                    <BrowserRouter>
+        <BrowserRouter>
+            <div>
+                <TopNavigation darkModeClickHandler={toggleDarkMode} initialDarkModeState={isDarkMode}/>
+                <div className='flex flex-nowrap flex-row'>
+                    <div className='flex-1-5 min-w-0 bg-red-200 shadow-around'>
+                        <Sidebar/>
+                    </div>
+                    <div className='flex-4-5 min-w-0'>
                         <Switch>
                             <Route path="/" component={Home} exact/>
+                            <Route path="/users" component={Users} exact/>
                         </Switch>
-                    </BrowserRouter>
+                    </div>
                 </div>
             </div>
-        </div>
+        </BrowserRouter>
     )
 }
 

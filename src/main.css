@@ -14,3 +14,18 @@ input:checked ~ .dot {
 input ~ .dot {
     transition: transform 0s linear;
 }
+
+.approved {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.pending {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.declined {
+    background-color: lightcoral;
+    color: darkred;
+}

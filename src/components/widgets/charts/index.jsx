@@ -12,9 +12,9 @@ const LineChart = ({data}) => {
     });
 
     return (
-        <div className='p-5 rounded-xl cursor-pointer shadow-around'>
+        <div className='p-5 rounded-xl cursor-pointer shadow-around h-full w-full'>
             <h3 className='mb-5 text-2xl font-semibold'>{data.title}</h3>
-            <ResponsiveContainer width="100%" aspect={4 / 1}>
+            <ResponsiveContainer width='100%' height='100%'>
                 <Chart data={data.data} margin={{top: 5, right: 30, left: 20, bottom: 5,}}>
                     {data.showGrid && <CartesianGrid strokeDasharray="3 3"/>}
                     <XAxis dataKey="name" stroke={data.xAxisColor}/>

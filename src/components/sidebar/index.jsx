@@ -24,7 +24,7 @@ const Sidebar = () => {
                 {
                     name: "Home",
                     icon: <LineStyle/>,
-                    link: "#"
+                    link: "/"
                 },
                 {
                     name: "Analytics",
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 {
                     name: "Users",
                     icon: <PeopleOutlined/>,
-                    link: "#",
+                    link: "/users",
                 },
                 {
                     name: "Products",

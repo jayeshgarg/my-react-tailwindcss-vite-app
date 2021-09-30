@@ -50,7 +50,7 @@ const WidgetSmall = () => {
                 <tbody>
                 {data.members.map((member) => {
                     return (
-                        <tr key={member.id} className='bg-red-100 items-center'>
+                        <tr key={member.id} className='items-center'>
                             <td className='py-1.5 pr-1.5 '>
                                 <img src={member.pic} className='h-12 w-12 rounded-full object-cover'
                                      alt={member.name}/>
