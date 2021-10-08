@@ -32,7 +32,7 @@ Removes the `out` folder.
 
 ### `npm run dev`
 
-Starts the server in development mode for local development and testing.
+Starts a local server on `3000` port in development mode for development and testing.
 
 ### `npm run docker:build`
 
