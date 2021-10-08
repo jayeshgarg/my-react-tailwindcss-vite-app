@@ -1,21 +1,22 @@
 import React from 'react';
 import Log from "../../util/logging";
 import {Link} from "react-router-dom";
+import './submenuGroup.css'
 
 const SidebarMenuGroup = ({data}) => {
 
     Log.debug("SidebarMenuGroup", "Menu Data", data)
 
     return (
-        <div className='mb-2.5'>{/* sidebarMenu */}
-            <h3 className='text-xl text-gray-500 font-bold'>{data.title}</h3>{/* sidebarTitle */}
-            <ul className='p-1.5'>{/* sidebarList */}
+        <div className='submenu-container'>
+            <h3 className='submenu-title'>{data.title}</h3>
+            <ul className='submenu-list'>
                 {
                     data.items.map((item, index) => {
-                        const style = 'p-1.5 cursor-pointer flex items-center hover:bg-red-200 text-xl text-gray-800' + (item.active ? "bg-red-200" : "")
+                        const style = 'submenu-list-item ' + (item.active ? "active" : "")
                         return (
-                            <li key={index} className={style}>{/* sidebarListItem */}
-                                <Link to={item.link}><span className='mr-2'>{item.icon}</span> <span>{item.name}</span></Link>
+                            <li key={index} className={style}>
+                                <Link to={item.link}><span className='submenu-item-link-icon'>{item.icon}</span> <span>{item.name}</span></Link>
                             </li>
                         )
                     })

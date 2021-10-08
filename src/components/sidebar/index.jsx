@@ -15,6 +15,8 @@ import {
     WorkOutline
 } from "@mui/icons-material";
 
+import './sidebar.css'
+
 const Sidebar = () => {
 
     const data = [
@@ -104,7 +106,7 @@ const Sidebar = () => {
     ]
 
     return (
-        <div className='h-sidebar sticky pl-5 pt-2'>
+        <div className='sidebar-container'>
             {
                 data.map((grp, index) => {
                     return <SidebarMenuGroup key={index} data={grp}/>

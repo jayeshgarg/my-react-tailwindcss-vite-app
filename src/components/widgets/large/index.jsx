@@ -140,7 +140,7 @@ const WidgetLarge = ({data, checkbox}) => {
                                                     {
                                                         col.isColoredStatus ?
                                                             <span
-                                                                className={'rounded-xl p-2.5 ' + calculateStatusColor(row[col.id])}>{col.isCurrency && col.currencySymbol}{row[col.id]}</span> :
+                                                                className={'rounded-xl p-2.5 ' + calculateStatusColor(row[col.id])}>{col.isCurrency && col.currencySymbol} {row[col.id]}</span> :
                                                             <span>{col.isCurrency && col.currencySymbol} {row[col.id]}</span>
                                                     }
 

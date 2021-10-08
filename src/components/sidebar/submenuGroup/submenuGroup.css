@@ -1,0 +1,23 @@
+.submenu-container {
+    @apply mb-2.5
+}
+
+.submenu-title {
+    @apply text-xl text-gray-500 font-bold
+}
+
+.submenu-list {
+    @apply p-1.5
+}
+
+.submenu-list-item {
+    @apply p-1.5 cursor-pointer flex items-center hover:bg-red-200 text-xl text-gray-800
+}
+
+.submenu-item-link-icon{
+    @apply mr-2
+}
+
+.submenu-list-item.active{
+    @apply bg-red-200
+}

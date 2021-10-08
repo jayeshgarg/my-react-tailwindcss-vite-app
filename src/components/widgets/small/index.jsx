@@ -1,6 +1,7 @@
 import React from 'react';
 import {Visibility} from "@mui/icons-material";
 import Log from "../../util/logging";
+import './smallWidget.css';
 
 const WidgetSmall = () => {
     const data = {
@@ -44,27 +45,27 @@ const WidgetSmall = () => {
     }
 
     return (
-        <div className='shadow-around p-5 rounded-xl w-full'>
-            <span className='text-2xl font-semibold'>{data.title}</span>
-            <table className='w-full'>
+        <div className='widget-container'>
+            <span className='widget-title'>{data.title}</span>
+            <table className='grid-view'>
                 <tbody>
                 {data.members.map((member) => {
                     return (
-                        <tr key={member.id} className='items-center'>
-                            <td className='py-1.5 pr-1.5 '>
-                                <img src={member.pic} className='h-12 w-12 rounded-full object-cover'
+                        <tr key={member.id} className='grid-row'>
+                            <td className='image-container'>
+                                <img src={member.pic} className='image-icon'
                                      alt={member.name}/>
                             </td>
-                            <td className='py-1.5 pr-1.5'>
-                                <div className='flex flex-col'>
-                                    <span className='font-semibold overflow-ellipsis'>{member.name}</span>
-                                    <span className='font-extralight text-sm'>{member.title}</span>
+                            <td className='info-container'>
+                                <div className='info-flexer'>
+                                    <span className='info-title'>{member.name}</span>
+                                    <span className='info-description'>{member.title}</span>
                                 </div>
                             </td>
-                            <td className='py-1.5'>
+                            <td className='view-container'>
                                 <button onClick={() => {
                                     onClickViewHandler(member.id)
-                                }} className='px-2.5 py-2 text-gray-600'><Visibility/></button>
+                                }} className='view-button'><Visibility/></button>
                             </td>
                         </tr>
                     )

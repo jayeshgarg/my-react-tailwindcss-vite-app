@@ -39,7 +39,7 @@ function App() {
             <div>
                 <TopNavigation darkModeClickHandler={toggleDarkMode} initialDarkModeState={isDarkMode}/>
                 <div className='flex flex-nowrap flex-row'>
-                    <div className='flex-1-5 min-w-0 bg-red-200 shadow-around'>
+                    <div className='flex-1-5 min-w-0 shadow-around'>
                         <Sidebar/>
                     </div>
                     <div className='flex-4-5 min-w-0'>

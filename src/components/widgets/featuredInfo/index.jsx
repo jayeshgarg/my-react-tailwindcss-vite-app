@@ -1,6 +1,6 @@
 import React from 'react';
-import {height} from "tailwindcss/lib/plugins";
 import {ArrowDownward, ArrowUpward} from "@mui/icons-material";
+import TextFormatter from "../../util/textFormater";
 
 const FeaturedInfo = ({data}) => {
 
@@ -9,7 +9,8 @@ const FeaturedInfo = ({data}) => {
         <div className='my-0 p-8 rounded-xl cursor-pointer shadow-around'>
             <span className='text-2xl font-bold mt-52'>{data.title}</span>
             <div className='my-0 mx-0 flex items-center '>
-                <span className='text-5xl font-medium'>{data.currencySymbol}{data.currentValue}</span>
+                <span
+                    className='text-5xl font-medium'>{TextFormatter.formatCurrency(data.currentValue, data.currencySymbol)}</span>
                 <span
                     className={`flex items-center ml-5 text-xl ${data.change > 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {data.change}

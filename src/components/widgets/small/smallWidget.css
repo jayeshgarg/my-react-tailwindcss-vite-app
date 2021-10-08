@@ -1,0 +1,47 @@
+.widget-container {
+    @apply shadow-around p-5 rounded-xl w-full;
+}
+
+.widget-title {
+    @apply text-2xl font-semibold;
+}
+
+.grid-view {
+    @apply w-full;
+}
+
+.grid-row {
+    @apply items-center
+}
+
+.image-container {
+    @apply py-1.5 pr-1.5
+}
+
+.image-icon {
+    @apply h-12 w-12 rounded-full object-cover
+}
+
+.info-container {
+    @apply py-1.5 pr-1.5
+}
+
+.info-flexer {
+    @apply flex flex-col
+}
+
+.info-title {
+    @apply font-semibold overflow-ellipsis
+}
+
+.info-description {
+    @apply font-extralight text-sm
+}
+
+.view-container {
+    @apply py-1.5
+}
+
+.view-button {
+    @apply px-2.5 py-2 text-gray-600
+}

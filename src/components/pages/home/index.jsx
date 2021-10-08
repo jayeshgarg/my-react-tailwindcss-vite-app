@@ -9,19 +9,19 @@ const Home = () => {
         {
             title: "Revenue",
             currencySymbol: "€",
-            currentValue: "2,415.00",
+            currentValue: 20415.00,
             change: "-11.4",
             footer: "Compared to last month"
         }, {
             title: "Sales",
             currencySymbol: "$",
-            currentValue: "4,415.00",
+            currentValue: 4415.00,
             change: "-1.4",
             footer: "Compared to last month"
         }, {
             title: "Expenditure",
             currencySymbol: "€",
-            currentValue: "2,225.00",
+            currentValue: 2225.00,
             change: "+2.4",
             footer: "Compared to last month"
         }

@@ -1,0 +1,3 @@
+.sidebar-container{
+    @apply h-sidebar sticky pl-5 pt-2
+}
