@@ -20,6 +20,10 @@ _A faster, more powerful, on-demand engine for Tailwind CSS v2.1+._
 The build & deploy tool that is faster and more efficient than CRA(create-react-app). It pre-incorporates tree shakedown
 tool to reduce the production-build binary size be it in terms of JS code or CSS code.
 
+## [Docker](https://www.docker.com/)
+
+A tool to encapsulate the whole thing into a repeatable, predictable, shareable and deployment efficient bundle.
+
 ## Scripts available
 
 ### `npm run build`
